@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" version="1.1">
+  <title>Cool Skull with Cigarette and Fire</title>
+  <defs>
+    <linearGradient id="smokeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Fire gradient -->
+    <linearGradient id="fireGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffcc00;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Fire filter -->
+    <filter id="fireFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G" />
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Background gradient -->
+    <radialGradient id="backgroundGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#990000;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#800000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#660000;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#backgroundGradient)" />
+  
+  <!-- Fire behind skull -->
+  <g filter="url(#glow)">
+    <path d="M350,800 C300,700 320,650 300,600 C280,550 350,500 400,550 C450,500 520,550 500,600 C480,650 500,700 450,800 Z" 
+          fill="url(#fireGradient)" filter="url(#fireFilter)" opacity="0.9" />
+    <path d="M380,800 C350,730 370,680 350,640 C330,600 380,560 400,590 C420,560 470,600 450,640 C430,680 450,730 420,800 Z" 
+          fill="#ffcc00" filter="url(#fireFilter)" opacity="0.8" />
+    <path d="M390,800 C370,750 380,700 370,670 C360,640 390,620 400,640 C410,620 440,640 430,670 C420,700 430,750 410,800 Z" 
+          fill="#ffffff" filter="url(#fireFilter)" opacity="0.6" />
+  </g>
+  
+  <!-- Skull base -->
+  <path d="M400,120 C250,120 180,220 180,350 C180,450 230,500 240,530 C250,560 260,590 270,610 C280,630 310,650 340,660 L350,680 C350,700 370,710 400,710 C430,710 450,700 450,680 L460,660 C490,650 520,630 530,610 C540,590 550,560 560,530 C570,500 620,450 620,350 C620,220 550,120 400,120 Z" 
+        fill="#ffffff" stroke="#000000" stroke-width="15" />
+  
+  <!-- Jaw -->
+  <path d="M340,660 C340,680 360,700 400,700 C440,700 460,680 460,660 L450,640 L350,640 L340,660 Z" 
+        fill="#ffffff" stroke="#000000" stroke-width="10" />
+  
+  <!-- Left eye socket -->
+  <path d="M320,300 C270,300 250,340 250,380 C250,430 290,470 320,470 C350,470 380,440 380,390 C380,340 350,300 320,300 Z" 
+        fill="#000000" stroke="#000000" stroke-width="8" />
+  
+  <!-- Right eye socket -->
+  <path d="M480,300 C450,300 420,340 420,390 C420,440 450,470 480,470 C510,470 550,430 550,380 C550,340 530,300 480,300 Z" 
+        fill="#000000" stroke="#000000" stroke-width="8" />
+  
+  <!-- Fire in eye sockets -->
+  <g opacity="0.8">
+    <path d="M320,380 C300,350 310,330 320,320 C330,310 340,330 340,350 C350,330 360,340 350,360 C340,380 330,370 320,380 Z" 
+          fill="url(#fireGradient)" filter="url(#fireFilter)" />
+    <path d="M480,380 C460,350 470,330 480,320 C490,310 500,330 500,350 C510,330 520,340 510,360 C500,380 490,370 480,380 Z" 
+          fill="url(#fireGradient)" filter="url(#fireFilter)" />
+  </g>
+  
+  <!-- Sunglasses -->
+  <path d="M250,370 L320,350 L380,350 L420,350 L480,350 L550,370 L560,365 L480,340 L420,340 L400,340 L380,340 L320,340 L240,365 Z" 
+        fill="#ff0000" stroke="#000000" stroke-width="5" />
+  <path d="M250,370 C250,410 280,440 320,440 C360,440 380,410 380,370 L320,350 Z" 
+        fill="#000000" stroke="#000000" stroke-width="3" />
+  <path d="M420,370 C420,410 440,440 480,440 C520,440 550,410 550,370 L480,350 Z" 
+        fill="#000000" stroke="#000000" stroke-width="3" />
+  
+  <!-- Nose hole -->
+  <path d="M380,500 C380,520 400,540 400,540 C400,540 420,520 420,500 C420,480 410,470 400,470 C390,470 380,480 380,500 Z" 
+        fill="#000000" stroke="#000000" stroke-width="5" />
+  
+  <!-- Upper mouth line -->
+  <path d="M350,590 C370,600 430,600 450,590" 
+        fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" />
+        
+  <!-- Teeth -->
+  <path d="M350,640 L350,630 L370,630 L370,640 L350,640 Z M380,640 L380,630 L400,630 L400,640 L380,640 Z M410,640 L410,630 L430,630 L430,640 L410,640 Z M440,640 L440,630 L460,630 L460,640 L440,640 Z" 
+        fill="#ffffff" stroke="#000000" stroke-width="3" />
+  
+  <!-- Cigarette - now connected to the mouth -->
+  <rect x="385" y="580" width="100" height="20" fill="#ffffff" stroke="#000000" stroke-width="3" transform="rotate(15, 400, 580)" />
+  <rect x="385" y="580" width="20" height="20" fill="#ff9900" stroke="#000000" stroke-width="3" transform="rotate(15, 400, 580)" />
+  
+  <!-- Smoke & fire from cigarette -->
+  <g transform="rotate(15, 400, 580)">
+    <!-- Fire from cigarette -->
+    <path d="M500,565 C510,550 505,540 515,530 C525,520 515,510 525,500" 
+          fill="none" stroke="url(#fireGradient)" stroke-width="10" stroke-linecap="round" filter="url(#glow)" />
+          
+    <!-- Smoke -->
+    <path d="M500,565 C510,555 515,540 510,530 C505,520 500,510 510,500 C520,490 530,485 525,475 C520,465 510,460 520,450" 
+          fill="none" stroke="url(#smokeGradient)" stroke-width="8" stroke-linecap="round" opacity="0.7" />
+    <path d="M500,560 C515,545 520,530 510,520 C500,510 505,500 515,490 C525,480 530,470 520,460" 
+          fill="none" stroke="url(#smokeGradient)" stroke-width="5" stroke-linecap="round" opacity="0.5" />
+  </g>
+  
+  <!-- Fire on top of skull -->
+  <g filter="url(#glow)">
+    <path d="M350,120 C375,80 385,70 400,60 C415,70 425,80 450,120 C470,80 480,90 460,120 C500,100 510,110 480,140 C520,130 500,170 470,160 C510,180 490,200 450,180 C470,220 430,200 420,180 C410,200 370,220 390,180 C350,200 330,180 370,160 C340,170 320,130 360,140 C330,110 340,100 380,120 C360,90 370,80 390,120 L350,120 Z" 
+          fill="url(#fireGradient)" filter="url(#fireFilter)" />
+  </g>
+  
+  <!-- Cracks -->
+  <path d="M400,120 L410,200 M430,130 L450,220 M370,130 L350,220" 
+        fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Gold tooth -->
+  <path d="M410,640 L410,630 L430,630 L430,640 L410,640 Z" 
+        fill="#ffd700" stroke="#000000" stroke-width="3" />
+        
+  <!-- Fire reflection highlights on skull -->
+  <path d="M240,350 C260,320 280,300 300,280 M500,280 C520,300 540,320 560,350" 
+        stroke="#ffcc00" stroke-width="5" stroke-opacity="0.3" stroke-linecap="round" />
+  <path d="M300,600 C330,630 370,650 400,660 C430,650 470,630 500,600" 
+        stroke="#ff9900" stroke-width="5" stroke-opacity="0.3" stroke-linecap="round" />
+</svg>
