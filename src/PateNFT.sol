@@ -59,19 +59,14 @@ contract PateNFT is ERC721{
                         abi.encodePacked(
                             '{"name":"', 
                             name(),
-                            '", "description":"Neon Sentinel is a dynamic cyberpunk guardian NFT that shifts between calm vigilance and blazing fury, reflecting dual moods in a futuristic world.",',
+                            '", "description":"Pate is a dynamic Skull NFT that shifts between calm vigilance and blazing fury, reflecting dual moods.",',
                             '"image":"', 
                             imageURI, 
                             '", "attributes":[',
                                 '{"trait_type":"Type","value":"Dynamic NFT"},',
                                 '{"trait_type":"Mood","value":"Cool / Angry"},',
-                                '{"trait_type":"Background","value":"Neon City / Red Fury"},',
-                                '{"trait_type":"Emotion Core","value":"Calm / Rage"},',
-                                '{"trait_type":"Eyes","value":"Blue Glow / Red Blaze"},',
-                                '{"trait_type":"Armor","value":"ChromeTech Shell"},',
-                                '{"trait_type":"State","value":"Passive / Combat"},',
                                 '{"trait_type":"Edition","value":"1 of 1"},',
-                                '{"trait_type":"Theme","value":"Cyberpunk"}',
+                                '{"trait_type":"Theme","value":"Pate NFT"}',
                             ']}'
                         )
                     )
